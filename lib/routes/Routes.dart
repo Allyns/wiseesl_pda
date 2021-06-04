@@ -5,7 +5,7 @@ import '../pages/Tabs.dart';
 //配置路由
 final routes = {
   '/': (context) => Tabs(),
-  // '/appBarDemo':(context)=>AppBarDemoPage(),
+  // '/registerSecond': (context,{arguments}) => RegisterSecondPage(arguments: arguments),
 };
 
 //固定写法
