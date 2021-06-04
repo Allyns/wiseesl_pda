@@ -83,7 +83,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -99,7 +99,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -115,7 +115,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -160,7 +160,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -176,7 +176,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -192,7 +192,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -237,7 +237,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -253,7 +253,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -269,7 +269,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -314,7 +314,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -330,7 +330,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -346,7 +346,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -391,7 +391,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -407,7 +407,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -423,7 +423,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -468,7 +468,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -484,7 +484,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -500,7 +500,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -545,7 +545,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "康师傅冰红茶统一方便面",
+                            "名称:" + "康师傅冰红茶统一方便面",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -561,7 +561,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(10)),
                           child: Text(
-                            "235659748658",
+                            "EAN:" + "235659748658",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
@@ -577,7 +577,7 @@ class _BindPageState extends State<BindPage>
                               ScreenAdapter.width(20),
                               ScreenAdapter.height(20)),
                           child: Text(
-                            "￥ 9.32",
+                            "ESL ID:" + "45648613515",
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,

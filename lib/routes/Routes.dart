@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-
+import 'package:wiseesl_pda/pages/Login.dart';
+import 'package:wiseesl_pda/pages/ServiceSetting.dart';
+import 'package:wiseesl_pda/pages/ProductDetailPage.dart';
 import '../pages/Tabs.dart';
 
 //配置路由
 final routes = {
   '/': (context) => Tabs(),
+  '/login': (context) => LoginPage(),
+  '/serviceSetting': (context) => ServiceSettingPage(),
+  '/productDetails': (context) => ProductDetailsPage(),
   // '/registerSecond': (context,{arguments}) => RegisterSecondPage(arguments: arguments),
 };
 

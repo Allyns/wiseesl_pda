@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wiseesl_pda/pages/Tabs.dart';
 import 'package:wiseesl_pda/services/EventBus.dart';
 import 'package:wiseesl_pda/services/ScreenAdapter.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:wiseesl_pda/view/MyTextField.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ProductsPage extends StatefulWidget {
   ProductsPage({Key key}) : super(key: key);
@@ -54,7 +54,7 @@ class _ProductsPageState extends State<ProductsPage>
           children: <Widget>[
             //商品列表
             Tab(
-              child: _getProductLists(),
+              child: _getProductLists(context),
             ),
             //添加商品视图
             Tab(
@@ -190,7 +190,7 @@ class _ProductsPageState extends State<ProductsPage>
   }
 }
 
-Widget _getProductLists() {
+Widget _getProductLists(BuildContext context) {
   return ListView(
     children: <Widget>[
       SizedBox(
@@ -222,7 +222,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "康师傅冰红茶统一方便面",
+                          "名称:" + "康师傅冰红茶统一方便面",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -237,7 +237,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "235659748658",
+                          "EAN:" + "235659748658",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -252,7 +252,199 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(8)),
                         child: Text(
-                          "￥ 9.32",
+                          "价格:" + "￥ 9.32",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 13),
+                        ),
+                      )
+                    ]),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: ScreenAdapter.height(170),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: ScreenAdapter.width(140),
+                      height: ScreenAdapter.width(70),
+                      child: Text(
+                        "绑定",
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ),
+                    onTap: () {
+                      print("绑定");
+                    },
+                  ),
+                ),
+              )
+            ],
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, "/productDetails");
+            print("商品详情");
+          },
+        ),
+      ),
+      Card(
+        elevation: 5,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(15)),
+        ),
+        color: Colors.white,
+        margin: EdgeInsets.all(4),
+        child: InkWell(
+          child: Stack(
+            children: <Widget>[
+              Align(
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.web_sharp),
+                      iconSize: 40,
+                    ),
+                    Column(children: <Widget>[
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(10),
+                            ScreenAdapter.height(30),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(10)),
+                        child: Text(
+                          "名称:" + "康师傅冰红茶统一方便面",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 14),
+                        ),
+                      ),
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(12),
+                            ScreenAdapter.height(10),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(10)),
+                        child: Text(
+                          "EAN:" + "235659748658",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 13),
+                        ),
+                      ),
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(12),
+                            ScreenAdapter.height(10),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(8)),
+                        child: Text(
+                          "价格:" + "￥ 9.32",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 13),
+                        ),
+                      )
+                    ]),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                height: ScreenAdapter.height(170),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: InkWell(
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: ScreenAdapter.width(140),
+                      height: ScreenAdapter.width(70),
+                      child: Text(
+                        "绑定",
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ),
+                    onTap: () {
+                      print("绑定");
+                    },
+                  ),
+                ),
+              )
+            ],
+          ),
+          onTap: () {
+            Navigator.pushNamed(context, "/productDetails");
+            // Navigator.pushNamed(ProductsPage, "/productDetails");
+          },
+        ),
+      ),
+      Card(
+        elevation: 5,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(15)),
+        ),
+        color: Colors.white,
+        margin: EdgeInsets.all(4),
+        child: InkWell(
+          child: Stack(
+            children: <Widget>[
+              Align(
+                child: Row(
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.web_sharp),
+                      iconSize: 40,
+                    ),
+                    Column(children: <Widget>[
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(10),
+                            ScreenAdapter.height(30),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(10)),
+                        child: Text(
+                          "名称:" + "康师傅冰红茶统一方便面",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 14),
+                        ),
+                      ),
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(12),
+                            ScreenAdapter.height(10),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(10)),
+                        child: Text(
+                          "EAN:" + "235659748658",
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.left,
+                          style: TextStyle(color: Colors.black54, fontSize: 13),
+                        ),
+                      ),
+                      Container(
+                        width: ScreenAdapter.width(420),
+                        margin: EdgeInsets.fromLTRB(
+                            ScreenAdapter.width(12),
+                            ScreenAdapter.height(10),
+                            ScreenAdapter.width(20),
+                            ScreenAdapter.height(8)),
+                        child: Text(
+                          "价格:" + "￥ 9.32",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -317,7 +509,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "康师傅冰红茶统一方便面",
+                          "名称:" + "康师傅冰红茶统一方便面",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -332,7 +524,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "235659748658",
+                          "EAN:" + "235659748658",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -347,7 +539,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(8)),
                         child: Text(
-                          "￥ 9.32",
+                          "价格:" + "￥ 9.32",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -412,7 +604,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "康师傅冰红茶统一方便面",
+                          "名称:" + "康师傅冰红茶统一方便面",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -427,7 +619,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "235659748658",
+                          "EAN:" + "235659748658",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -442,7 +634,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(8)),
                         child: Text(
-                          "￥ 9.32",
+                          "价格:" + "￥ 9.32",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -507,7 +699,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "康师傅冰红茶统一方便面",
+                          "名称:" + "康师傅冰红茶统一方便面",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -522,7 +714,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(10)),
                         child: Text(
-                          "235659748658",
+                          "EAN:" + "235659748658",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -537,292 +729,7 @@ Widget _getProductLists() {
                             ScreenAdapter.width(20),
                             ScreenAdapter.height(8)),
                         child: Text(
-                          "￥ 9.32",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      )
-                    ]),
-                  ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: ScreenAdapter.height(170),
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: InkWell(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: ScreenAdapter.width(140),
-                      height: ScreenAdapter.width(70),
-                      child: Text(
-                        "绑定",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    onTap: () {
-                      print("绑定");
-                    },
-                  ),
-                ),
-              )
-            ],
-          ),
-          onTap: () {
-            print("商品详情");
-          },
-        ),
-      ),
-      Card(
-        elevation: 5,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-        ),
-        color: Colors.white,
-        margin: EdgeInsets.all(4),
-        child: InkWell(
-          child: Stack(
-            children: <Widget>[
-              Align(
-                child: Row(
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.web_sharp),
-                      iconSize: 40,
-                    ),
-                    Column(children: <Widget>[
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(10),
-                            ScreenAdapter.height(30),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "康师傅冰红茶统一方便面",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 14),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "235659748658",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(8)),
-                        child: Text(
-                          "￥ 9.32",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      )
-                    ]),
-                  ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: ScreenAdapter.height(170),
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: InkWell(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: ScreenAdapter.width(140),
-                      height: ScreenAdapter.width(70),
-                      child: Text(
-                        "绑定",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    onTap: () {
-                      print("绑定");
-                    },
-                  ),
-                ),
-              )
-            ],
-          ),
-          onTap: () {
-            print("商品详情");
-          },
-        ),
-      ),
-      Card(
-        elevation: 5,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-        ),
-        color: Colors.white,
-        margin: EdgeInsets.all(4),
-        child: InkWell(
-          child: Stack(
-            children: <Widget>[
-              Align(
-                child: Row(
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.web_sharp),
-                      iconSize: 40,
-                    ),
-                    Column(children: <Widget>[
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(10),
-                            ScreenAdapter.height(30),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "康师傅冰红茶统一方便面",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 14),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "235659748658",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(8)),
-                        child: Text(
-                          "￥ 9.32",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      )
-                    ]),
-                  ],
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: ScreenAdapter.height(170),
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: InkWell(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: ScreenAdapter.width(140),
-                      height: ScreenAdapter.width(70),
-                      child: Text(
-                        "绑定",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    onTap: () {
-                      print("绑定");
-                    },
-                  ),
-                ),
-              )
-            ],
-          ),
-          onTap: () {
-            print("商品详情");
-          },
-        ),
-      ),
-      Card(
-        elevation: 5,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-        ),
-        color: Colors.white,
-        margin: EdgeInsets.all(4),
-        child: InkWell(
-          child: Stack(
-            children: <Widget>[
-              Align(
-                child: Row(
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.web_sharp),
-                      iconSize: 40,
-                    ),
-                    Column(children: <Widget>[
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(10),
-                            ScreenAdapter.height(30),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "康师傅冰红茶统一方便面",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 14),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(10)),
-                        child: Text(
-                          "235659748658",
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: TextStyle(color: Colors.black54, fontSize: 13),
-                        ),
-                      ),
-                      Container(
-                        width: ScreenAdapter.width(420),
-                        margin: EdgeInsets.fromLTRB(
-                            ScreenAdapter.width(12),
-                            ScreenAdapter.height(10),
-                            ScreenAdapter.width(20),
-                            ScreenAdapter.height(8)),
-                        child: Text(
-                          "￥ 9.32",
+                          "价格:" + "￥ 9.32",
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
@@ -864,5 +771,3 @@ Widget _getProductLists() {
     ],
   );
 }
-
-
