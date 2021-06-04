@@ -4,6 +4,7 @@ import 'package:wiseesl_pda/services/EventBus.dart';
 import 'package:wiseesl_pda/services/ScreenAdapter.dart';
 import 'package:wiseesl_pda/view/MyTextField.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:barcode_scan/barcode_scan.dart';
 
 class ProductsPage extends StatefulWidget {
   ProductsPage({Key key}) : super(key: key);
@@ -79,6 +80,22 @@ class _ProductsPageState extends State<ProductsPage>
                                     icon: Icon(Icons.qr_code_scanner),
                                     onPressed: () {
                                       print("点击扫描");
+                                      getQrcodeState()
+                                          .then((value) => setState(() {
+                                                setState(() {
+                                                  Fluttertoast.showToast(
+                                                      msg: "扫码内容=${value}",
+                                                      toastLength:
+                                                          Toast.LENGTH_SHORT,
+                                                      gravity:
+                                                          ToastGravity.BOTTOM,
+                                                      timeInSecForIosWeb: 1,
+                                                      backgroundColor:
+                                                          Colors.black45,
+                                                      textColor: Colors.white,
+                                                      fontSize: 16.0);
+                                                });
+                                              }));
                                     },
                                   )),
                             ],
@@ -125,7 +142,7 @@ class _ProductsPageState extends State<ProductsPage>
                                   });
                                 },
                                 child: Text(
-                                  "打开其他信息 (选填)",
+                                  "填写其他信息 (选填)",
                                   style: TextStyle(color: Colors.blue),
                                 ),
                               )),
@@ -188,6 +205,22 @@ class _ProductsPageState extends State<ProductsPage>
       ),
     );
   }
+}
+
+//扫描二维码
+Future<String> getQrcodeState() async {
+  try {
+    const ScanOptions options = ScanOptions(
+      strings: {
+        'cancel': '取消',
+        'flash_on': '开启闪光灯',
+        'flash_off': '关闭闪光灯',
+      },
+    );
+    final ScanResult result = await BarcodeScanner.scan(options: options);
+    return result.rawContent;
+  } catch (e) {}
+  return null;
 }
 
 Widget _getProductLists(BuildContext context) {

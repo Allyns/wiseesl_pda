@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.witstec.wiseesl.wiseesl_pda">
+    <uses-permission android:name="android.permission.CAMERA" />
    <application
         android:label="wiseesl_pda"
         android:icon="@mipmap/ic_loglo">

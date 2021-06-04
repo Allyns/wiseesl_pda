@@ -93,7 +93,7 @@ class ProductDetailPageState extends State<ProductDetailsPage> {
                     width: ScreenAdapter.width(400),
                     height: ScreenAdapter.height(58),
                     child: ElevatedButton(
-                      child: Text('确定添加'),
+                      child: Text('确认修改'),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.blue,
                         shape: RoundedRectangleBorder(

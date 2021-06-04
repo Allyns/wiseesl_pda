@@ -121,14 +121,12 @@ class SettingPageState extends State<SettingPage> {
                               child: Text('取消'),
                               onPressed: () {
                                 print('yes...');
-                                Navigator.of(context).pop();
                               },
                             ),
                             FlatButton(
                               child: Text('确定'),
                               onPressed: () {
                                 print('no...');
-                                Navigator.of(context).pop();
                               },
                             ),
                           ],
