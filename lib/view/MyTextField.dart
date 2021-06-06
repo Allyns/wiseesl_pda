@@ -1,23 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:wiseesl_pda/services/ScreenAdapter.dart';
 
-class MyTextField extends StatelessWidget {
-  final text;
-  final width;
-  final double height;
+///自带删除的ITextField
+typedef void ITextFieldCallBack(String content);
 
-  const MyTextField(
-      {this.text = '', this.width = double.infinity, this.height = 70.0});
+class MyTextField extends StatefulWidget {
+  final String text;
+  final double width;
+  final double height;
+  final ITextFieldCallBack iTextFieldCallBack;
+
+  MyTextField(
+      {Key key,
+      this.text = '',
+      this.iTextFieldCallBack,
+      this.width = double.infinity,
+      this.height = 70.0})
+      : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => MyTextFieldState();
+}
+
+class MyTextFieldState extends State<MyTextField> {
+  String value = "";
 
   @override
   Widget build(BuildContext context) {
-    ScreenAdapter.init(context);
     return Container(
-      height: ScreenAdapter.height(height),
+      height: ScreenAdapter.height(widget.height),
       width: double.infinity,
       child: TextField(
-        decoration:
-        InputDecoration(border: OutlineInputBorder(), labelText: text),
+        decoration: InputDecoration(
+            border: OutlineInputBorder(), labelText: widget.text),
+        onChanged: (values) {
+          setState(() {
+            value = values;
+            widget.iTextFieldCallBack(value);
+          });
+        },
       ),
     );
   }

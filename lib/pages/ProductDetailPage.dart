@@ -10,6 +10,8 @@ class ProductDetailsPage extends StatefulWidget {
 }
 
 class ProductDetailPageState extends State<ProductDetailsPage> {
+  String name;
+
   @override
   Widget build(BuildContext context) {
     ScreenAdapter.init(context);
@@ -63,6 +65,9 @@ class ProductDetailPageState extends State<ProductDetailsPage> {
                   SizedBox(height: 14),
                   MyTextField(
                     text: "名称",
+                    iTextFieldCallBack: (value) {
+                      name = value;
+                    },
                   ),
                   SizedBox(height: 14),
                   MyTextField(
@@ -106,6 +111,7 @@ class ProductDetailPageState extends State<ProductDetailsPage> {
                       ),
                       onPressed: () {
                         print("确认修改");
+                        print("name=" + name);
                       },
                     ),
                   ),

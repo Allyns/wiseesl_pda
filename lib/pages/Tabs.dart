@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wiseesl_pda/services/EventBus.dart';
+import 'package:wiseesl_pda/data//ProductInfo.dart';
 import 'tabs/Products.dart';
 import 'tabs/Bind.dart';
 import 'tabs/Setting.dart';

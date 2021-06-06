@@ -119,8 +119,11 @@ class _ProductsPageState extends State<ProductsPage>
                             ],
                           ),
                           SizedBox(height: 14),
-                          MyTextField(
+                          new MyTextField(
                             text: "名称",
+                            iTextFieldCallBack: (value){
+
+                            },
                           ),
                           SizedBox(height: 14),
                           MyTextField(
