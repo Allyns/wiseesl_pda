@@ -8,12 +8,21 @@
 
 
 ##项目功能
+
 1.dio网络请求框架
+
 2.针对所有终端的屏幕适配
+
 3.tab页面状态保存 
+
 4.provider 状态管理
+
 5.EventBus广播
+
 6.sqlite数据库
+
 7. webview加载网页
+
 8. 扫描二维码
+
 9. HTTP缓存、IO缓存
