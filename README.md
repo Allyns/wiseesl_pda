@@ -1,16 +1,2 @@
-# wiseesl_pda
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###预览图
+![](https://upload-images.jianshu.io/upload_images/3384890-d5795b538851f507.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
